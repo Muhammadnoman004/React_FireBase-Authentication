@@ -1,12 +1,10 @@
 import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
-const onFinish = (values) => {
-    console.log('Success:', values);
-};
+
 const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
 };
-const App = () => (
+const App = ({ logFun }) => (
     <Form
         name="basic"
         labelCol={{
@@ -21,17 +19,17 @@ const App = () => (
         initialValues={{
             remember: true,
         }}
-        onFinish={onFinish}
+        onFinish={logFun}
         onFinishFailed={onFinishFailed}
         autoComplete="off"
     >
         <Form.Item
-            label="Username"
-            name="username"
+            label="Email"
+            name="email"
             rules={[
                 {
                     required: true,
-                    message: 'Please input your username!',
+                    message: 'Please input your email!',
                 },
             ]}
         >

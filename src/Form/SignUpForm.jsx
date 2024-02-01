@@ -1,12 +1,10 @@
 import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
-const onFinish = (values) => {
-    console.log('Success:', values);
-};
+
 const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
 };
-const App = () => (
+const App = ({ SupFunc }) => (
     <Form
         name="basic"
         labelCol={{
@@ -19,9 +17,9 @@ const App = () => (
             maxWidth: 600,
         }}
         initialValues={{
-            remember: true,
+            remember: false,
         }}
-        onFinish={onFinish}
+        onFinish={SupFunc}
         onFinishFailed={onFinishFailed}
         autoComplete="off"
     >
