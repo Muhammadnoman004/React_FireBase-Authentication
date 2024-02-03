@@ -23,18 +23,6 @@ const App = ({ SupFunc }) => (
         onFinishFailed={onFinishFailed}
         autoComplete="off"
     >
-        <Form.Item
-            label="Email"
-            name="email"
-            rules={[
-                {
-                    required: true,
-                    message: 'Please input your email!',
-                },
-            ]}
-        >
-            <Input />
-        </Form.Item>
 
         <Form.Item
             label="Username"
@@ -43,6 +31,19 @@ const App = ({ SupFunc }) => (
                 {
                     required: true,
                     message: 'Please input your username!',
+                },
+            ]}
+        >
+            <Input />
+        </Form.Item>
+
+        <Form.Item
+            label="Email"
+            name="email"
+            rules={[
+                {
+                    required: true,
+                    message: 'Please input your email!',
                 },
             ]}
         >
