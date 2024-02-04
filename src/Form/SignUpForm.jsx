@@ -1,5 +1,7 @@
 import React from 'react';
+import './Form.css';
 import { Button, Checkbox, Form, Input } from 'antd';
+import { Link } from 'react-router-dom';
 
 const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
@@ -22,7 +24,9 @@ const App = ({ SupFunc }) => (
         onFinish={SupFunc}
         onFinishFailed={onFinishFailed}
         autoComplete="off"
-    >
+
+        className='main'>
+        <h1 id='head'>Sign Up</h1>
 
         <Form.Item
             label="Username"
@@ -64,26 +68,16 @@ const App = ({ SupFunc }) => (
         </Form.Item>
 
         <Form.Item
-            name="remember"
-            valuePropName="checked"
             wrapperCol={{
                 offset: 8,
                 span: 16,
             }}
         >
-            <Checkbox>Remember me</Checkbox>
-        </Form.Item>
-
-        <Form.Item
-            wrapperCol={{
-                offset: 8,
-                span: 16,
-            }}
-        >
-            <Button type="primary" htmlType="submit">
-                Submit
+            <Button id='button' htmlType="submit">
+                SignUp
             </Button>
         </Form.Item>
+        <p id='para'>Already have an account ? <Link id='link' to={'/login'}>Login</Link></p>
     </Form>
 );
 export default App;
