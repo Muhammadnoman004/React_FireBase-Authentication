@@ -29,7 +29,7 @@ export default function Router() {
 
             <BrowserRouter>
                 <Routes>
-                    <Route path='*' element={<AppNotFound />} />
+                    <Route path='*' element={UserLog ? <Navigate to={'/profile'} /> : <AppNotFound />} />
                     <Route path='/' element={UserLog ? <Navigate to={'/profile'} /> : <SignUp />} />
                     <Route path='/login' element={UserLog ? <Navigate to={'/profile'} /> : <LogIn />} />
                     <Route path='/profile' element={UserLog ? <Profile /> : <Navigate to={'/login'} />} />

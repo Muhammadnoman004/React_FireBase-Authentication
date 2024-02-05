@@ -1,4 +1,5 @@
 import React from 'react'
+import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
 import SignUpForm from '../Form/SignUpForm'
 import { auth, createUserWithEmailAndPassword } from '../Confiq/Confiq'
@@ -12,6 +13,12 @@ export default function SignUp() {
             .then(async (userCredential) => {
                 const user = userCredential.user;
                 console.log(user);
+
+                Swal.fire({
+                    title: "Good job!",
+                    text: "Signed up successfully",
+                    icon: "success"
+                });
 
                 try {
                     const docRef = await addDoc(collection(db, "users"), {
@@ -31,8 +38,13 @@ export default function SignUp() {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorMessage);
-            });
 
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: errorMessage,
+                });
+            });
 
     }
 
