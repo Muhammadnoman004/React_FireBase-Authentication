@@ -61,6 +61,7 @@ const App = ({ logFun }) => (
             <Button id='button' htmlType="submit">
                 Login
             </Button>
+            <Button id="Google">Sign in with Google</Button>
         </Form.Item>
         <p id='para'>Don't have an account ? <Link id='link' to={'/'}>Signup</Link></p>
     </Form>

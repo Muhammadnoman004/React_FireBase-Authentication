@@ -76,6 +76,7 @@ const App = ({ SupFunc }) => (
             <Button id='button' htmlType="submit">
                 SignUp
             </Button>
+            <Button id="Google">Sign in with Google</Button>
         </Form.Item>
         <p id='para'>Already have an account ? <Link id='link' to={'/login'}>Login</Link></p>
     </Form>

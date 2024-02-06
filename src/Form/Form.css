@@ -4,7 +4,7 @@ body {
 
 .main {
     margin: auto;
-    margin-top: 10vh;
+    margin-top: 8vh;
     background-color: white;
     padding-top: 10px;
     padding-bottom: 15px;
@@ -41,6 +41,35 @@ body {
     box-shadow: 2px 2px 5px black;
 }
 
+#Google {
+    margin-top: 17px;
+    padding: 7px;
+    padding-left: 25px;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #009578 !important;
+    border-radius: 5px;
+    background-image: url(./images-removebg-preview.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 13%;
+    font-size: medium;
+    font-weight: 700;
+
+}
+
+#Google:hover {
+    background-color: rgb(66, 66, 66);
+    color: white;
+    border: none;
+}
+
+#Google:focus {
+    box-shadow: 2px 2px 3px black;
+    border: none;
+}
+
 #para {
     margin-left: 130px;
     font-weight: bold;
@@ -55,6 +84,10 @@ body {
 @media screen and (max-width : 1070px) {
     .main {
         width: 60%;
+    }
+
+    #Google {
+        background-position: 8%;
     }
 }
 
@@ -77,6 +110,13 @@ body {
         right: 33%;
     }
 
+    #Google {
+        width: 100%;
+        position: relative;
+        right: 33%;
+        background-position: 20%;
+    }
+
     #para {
         margin-left: 0;
     }
@@ -85,4 +125,11 @@ body {
         margin-left: 0;
     }
 
+}
+
+@media screen and (max-width : 380px) {
+    #Google {
+        background-position: 2%;
+        font-size: small;
+    }
 }

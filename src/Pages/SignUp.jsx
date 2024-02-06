@@ -25,6 +25,7 @@ export default function SignUp() {
                         UserName: data.username,
                         Email: data.email,
                         PassWord: data.password,
+                        Time: new Date().toLocaleString(),
 
                     });
                     console.log("Document written with ID: ", docRef.id);
